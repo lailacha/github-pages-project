@@ -1,30 +1,31 @@
-# GitHub pages project
+# Learner creator 
 
-Contexte:
+## How to setup the project
 
-Vous êtes un lead dev qui met en place un repository pour son équipe, toutes les bonnes pratiques doivent être mise en place pour garantir une bonne gestion de projet.
+### Clone the Project
+`git clone https://github.com/lailacha/docker_projet_esgi`
 
-Ce qu'il faut faire:
-- [ ] Forker le projet disponible à [cette adresse](https://github.com/quentinhermiteau/github-pages-project)
-- [ ] Mettre en place toutes les bonnes pratiques autour du git flow
-- [ ] Rédiger un Readme (nom du projet, commande pour setup le projet, etc)
-- [ ] Mettre en place des templates pour les issues et les pull requests
-- [ ] Mettre en place une gestion de projet (+ labels)
-- [ ] Mettre en place une github pages avec un thème
-- [ ] Le projet devra contenir au moins 1 branche feature et 1 branche fix
-- [ ] Les commits doivent être correctement rédigés (ET SIGNÉS)
-- [ ] Tout travail doit être répertorié dans les issues et suivi avec la gestion de projet de GitHub
+### Build docker container
+`docker-compose up -d`  </br> </br>
+This command will create the docker container and its images (Apache server, Phpmyadmin, MYSQL)
 
-Règles pour le projet:
-- Projet en individuel
-- Noté sur 7
+### Define environment variables
 
-Notation:
-| à faire | point |
-| --- | --- |
-| Gitflow | 1 |
-| Readme | 1,5 |
-| templates | 1,5 |
-| Gestion de projet | 1 |
-| commits + signés | 1 |
-| Github pages | 1 |
+You need to define some variables to use databases. </br>
+
+1. Create php file _conf.inc.php_
+2. define variables into the file like that:
+
+```<?php
+
+define("DBDRIVER", "mysql");
+define("DBUSER", "root");
+define("DBPWD", "password");
+define("DBHOST", "database");
+define("DBNAME", "database_name");
+define("DBPORT", "3306");
+define("DBPREFIXE", "esgi_");
+```
+
+### Got to **_http://localhost:8080/_**
+The project is ready :tada:
