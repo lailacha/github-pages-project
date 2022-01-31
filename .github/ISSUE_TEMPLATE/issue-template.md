@@ -8,13 +8,14 @@ assignees: ''
 ---
 
 ## Expected Behavior
+We would....
 
+## TASK
+- [ ] Some task
+- [ ] Some task
+- [ ] Some task
+- [ ] Some task
+- [ ] Some task
+- [ ] Some task
+- [ ] Some task
 
-## Actual Behavior
-
-
-## Steps to Reproduce the Problem
-
-1.
-1.
-1.
